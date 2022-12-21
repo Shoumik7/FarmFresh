@@ -10,8 +10,12 @@ server.listen(PORT, () => {
   //console.log(`Express server listening on Port: ${PORT}`)
 })
 
-server.get('/users', (req, res) => {
-  res.status(200).json({})
+server.get('/product/:product_id', (req, res) => {
+  product_id = req.params.product_id;
+  pool.query("SELECT * FROM products WHERE product_id = $1", [product_id], (error, results) => {
+      if (error) throw error;
+      res.status(200).json(results.rows);
+  })
 })
 
 server.post('/users', (req, res) => {
