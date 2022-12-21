@@ -1,4 +1,4 @@
-const server = require("./server");
+const server = require("./app");
 //const mongoose = require("mongoose");
 const supertest = require("supertest");
 const { TestWatcher } = require("jest");
@@ -7,7 +7,7 @@ const { expect } = require("chai");
 //Get users testing json retrieval
 describe('GET /users', () => {
   test('respond with 200 status code', async () => {
-    await supertest(server).get("/product/0").expect(200)
+    await supertest(server).get("/user-api/john@gmail.com/john").expect(200)
     //expect(response.statusCode.toBe(200))
   })
 });
