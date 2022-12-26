@@ -3,7 +3,7 @@ const request = require('supertest')
 const apptest = require('./apptesting')
 //const fetch = require('node-fetch')
 
-describe('Endpoints', () => {
+describe('Backend Endpoints', () => {
   it('should get a specified user', async () => {
     const res = await request(apptest)
       .get('/curr-user-api/172')
