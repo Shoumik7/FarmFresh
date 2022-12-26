@@ -7,14 +7,12 @@ router.post("/", controller.addTransaction);
 router.get("/get-in-cart/:id", controller.getTransactionInCartByProdID);
 router.get("/get-by-vendor/:id", controller.getTransactionsByVendorID);
 
-
 router.patch("/update/", controller.updateTransaction);
 router.get("/cart/:id", controller.getCustomerCart);
 router.get("/customer-current-orders/:id", controller.getCustomerCurrentOrders);
 router.get("/order/:id", controller.getVendorReserveRequests);
 router.get("/reserves/:id", controller.getVendorReserves);
 router.delete("/:id", controller.deleteTransaction);
-
 
 router.post("/past", controller.addPastTransaction);
 router.get("/past/customer/:id", controller.getPastCustomerTransaction);

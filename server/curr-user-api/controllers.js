@@ -11,5 +11,4 @@ const getUserByID = (req,res) => {
 
 module.exports = {
     getUserByID,
-    
 }

@@ -4,12 +4,12 @@ const express = require("express");
 const cors = require('cors');
 const fs = require('fs');
 const authProxy = require('./db/db.js');
-const app = express();
+const apptest = express();
 const PORT = process.env.PORT || 5001;
 //Start express server and cloud sql proxy
-app.use(cors());
-app.use(express.json());
-app.listen(PORT, () => {
+apptest.use(cors());
+apptest.use(express.json());
+apptest.listen(PORT, () => {
   console.log(`Express server listening on Port: ${PORT}`)
 })
 authProxy.startAuthProxy();
@@ -24,16 +24,16 @@ const revapi = require('./reviews-api/routes.js')
 const cloudinary_api = require('./cloudinary/config.js');
 
 //Endpoint main routes
-app.use('/api/transaction', trnapi);
-app.use('/api/users', usrapi);
-app.use('/api/products', prdapi);
-app.use('/api/vendors', farmapi);
-app.use('/search', srchEndpoint);
-app.use('/curr-user-api', curr_user_api);
-app.use('/api/reviews', revapi);
-app.use('/api/cloudinary', cloudinary_api);
+apptest.use('/api/transaction', trnapi);
+apptest.use('/api/users', usrapi);
+apptest.use('/api/products', prdapi);
+apptest.use('/api/vendors', farmapi);
+apptest.use('/search', srchEndpoint);
+apptest.use('/curr-user-api', curr_user_api);
+apptest.use('/api/reviews', revapi);
+apptest.use('/api/cloudinary', cloudinary_api);
 
 
-module.exports = app
+module.exports = apptest
 
 
