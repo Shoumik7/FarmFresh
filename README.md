@@ -4,6 +4,8 @@ FarmFresh is a Web Application to allow farmers to post fresh produce they have 
 
 For this project, our frontend is coded in ReactJS, our backend is coded in NodeJS, our database has been made using PostgreSQL, and our server is hosted on Google Cloud Platform. 
 
+Demo Video Link: https://www.youtube.com/watch?v=ETsEqVeDhlI&ab_channel=AlexanderYeung
+
 ## Installation
 Our frontend is dependent upon ReactJS and its libraries. Therefore, you will need to install npm and run the following commands once you have cloned the repository and navigated to the web-app directory. Our backend is dependent upon NodeJS and some of its libraries. [Click this link](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) for more information on how to install npm. Once you have npm installed, go to the web-app directory and run the following command:
 
